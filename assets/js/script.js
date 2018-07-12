@@ -1,6 +1,7 @@
-var myApp = angular.module('myApp', []);
-myApp.controller('myController', function($scope, $window) {
-  $scope.displayAlert = function(message) {
-    $window.alert("Bonjour");
+var alertApp = angular.module('myAlert', []);
+alertApp.controller('alertCtrl', ['$scope', '$window' function($scope, $window) {
+  $scope.message = 'Bonjour!';
+  $scope.displayAlert = function(messageAlert) {
+    $window.alert(messageAlert);
   };
-});
+}]);
